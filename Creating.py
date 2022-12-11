@@ -1,7 +1,12 @@
-# Key-Value pairs
-# Keys can be Strings, Int, Float, Bool, Tuples (immuatables)
+# Key-Value pairs (relational)
+# Keys can be Strings, Int, Float, Bool, Tuples (Have hash functions)
+# Dictionaries are iterable, has an __iter__ method
 # Since Python 3.6, dictionary items have the same order as how they are entered
 # guts of python built using dictionaries
+
+
+print(dir({}))
+
 
 capitals = {
 
@@ -29,4 +34,4 @@ dog_dict["age"] = 6
 
 del dog_dict["hungry"]  # deleting an item
 
-print(locals())
+
