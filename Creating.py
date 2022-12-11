@@ -1,6 +1,7 @@
 # Key-Value pairs
 # Keys can be Strings, Int, Float, Bool, Tuples (immuatables)
 # Since Python 3.6, dictionary items have the same order as how they are entered
+# guts of python built using dictionaries
 
 capitals = {
 
@@ -27,3 +28,5 @@ dog_dict["breed"] = "poodle"  # adding an item to the dictionary(dictname[key]=v
 dog_dict["age"] = 6
 
 del dog_dict["hungry"]  # deleting an item
+
+print(locals())

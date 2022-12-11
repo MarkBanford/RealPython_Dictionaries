@@ -35,9 +35,7 @@ if "Discovery" in captains:
 else:
     captains["Discovery"] = "unknown"
 
-
 # 4 soln
 
-for k,v in captains.items():
+for k, v in captains.items():
     print(f'The {k} is captained by {v}')
-
