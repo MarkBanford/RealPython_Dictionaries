@@ -17,7 +17,7 @@ for k, v in a_dict.items():
 
 # Calcs
 
-incomes = {'Jeff': 12000, "Annie": 230000, "Glen": 5000000}
+incomes = {'Jeff': 12_000, "Annie": 230_000, "Glen": 5_000_000}
 
 total_income = 0
 
