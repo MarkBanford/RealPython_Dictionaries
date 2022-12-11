@@ -25,6 +25,5 @@ capitals = {
 
 }
 
-for state, city in capitals.items(): # .items() produces tuples under the hood
+for state, city in capitals.items():  # .items() produces tuples under the hood. This is tuple unpacking (k,v)
     print(state, city)
-
