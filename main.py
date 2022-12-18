@@ -1,41 +1,22 @@
-'Testing knowledge'
-
-# 1. Create empty dict called "captains"
-# 2. Enter the following into it
-
-''' "Enterprise" - "Picard"
-    "Voyager" - "Janeway"
-    "Defiant" - "Sisko"
-
-'''
-
-# 3. Write 2 if statements to check if "Enterprise" and "Discovery" exists as keys.
-# set their value to "unknown" if the key does not exist.
-
-# 4. Loop over dictionary to print "ship is captained by captain"
-# 5. delete "Discovery" from dictionary
+# read in a file and fill dictionary with letter count
+import string
 
 
-# 1 + 2 solution
-captains = {}
+file = open('sometext.txt', 'r')
 
-captains["Enterprise"] = "Picard"
-captains["Voyager"] = "Janeway"
-captains["Defiant"] = "Sisko"
+d = dict.fromkeys(string.ascii_lowercase, 0)
 
-# 3 soln
+while 1:
+    char = file.read(1)
+    char = char.lower()
+    if not char:
+        break
+    if char.isalpha():
+        if char in d.keys():
+            d[char] += 1
 
-if "Enterprise" in captains:
-    pass
-else:
-    captains["Enterprise"] = "unknown"
+file.close()
 
-if "Discovery" in captains:
-    pass
-else:
-    captains["Discovery"] = "unknown"
+count_sorted = {k: v for k, v in sorted(d.items(), key=lambda item: item[1],reverse=True)}
 
-# 4 soln
-
-for k, v in captains.items():
-    print(f'The {k} is captained by {v}')
+print(count_sorted)
